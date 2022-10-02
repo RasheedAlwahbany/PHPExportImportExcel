@@ -1,16 +1,16 @@
 <?php
-$con=mysqli_connect("localhost","root","","yedco")or die("Connection faild: ".mysqli_connect_error());
-if(!mysqli_connect_errno()){
-$query=mysqli_query($con,"select * from accounts");
+
+$query=mysqli_query($con,"select * from cities");
 $arr=array();
 while($row=mysqli_fetch_assoc($query)){
     $arr[]=$row;
     
 }
 // print_r($arr);
-header("Content-Type: application/vnd.ms-excel");
-    header("Content-Disposition: attachment; filename=\"exported.xls\"");
-    
+header("Content-Disposition: attachment;filename=\"exported.xls\"");
+header("Content-Type: application/vnd.ms-excel; charset=utf-8");
+
+
     $heading=false;
     if(!empty($arr)){
         foreach($arr as $row){
@@ -25,6 +25,6 @@ header("Content-Type: application/vnd.ms-excel");
     }
 
     
-}
+
 
 ?>
