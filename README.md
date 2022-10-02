@@ -1,6 +1,6 @@
 # PHPExportImportExcel
 
-PHP Export Import To/From Excel Files To/From MySQL database in `phpmyadmin`
+PHP Export Import To/From Excel Files From/To MySQL database in `phpmyadmin` as simple as possible.
 
 # User Guide
 
